@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import http.client, re, time
 conn = http.client.HTTPSConnection("p.ya.ru")

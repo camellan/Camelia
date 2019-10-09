@@ -22,7 +22,7 @@ default_color white
 default_shade_color red
 default_outline_color green
 alignment middle_left
-gap_x 1260
+gap_x 1080
 gap_y 220
 no_buffers yes
 uppercase no
