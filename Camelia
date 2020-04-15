@@ -1,5 +1,5 @@
 background yes
-update_interval 30
+update_interval 1
 total_run_times 0
 
 use_xft yes
@@ -28,9 +28,9 @@ max_specials 1024
 max_user_text 4000
 override_utf8_locale yes
 minimum_size 0 0
-maximum_width 540 
-gap_x 1280
-gap_y 200
+ 
+gap_x 2500
+gap_y 20
 border_inner_margin 5
 border_outer_margin 6
 lua_load ./draw_bg.lua
@@ -40,13 +40,62 @@ imlib_cache_size 0
 own_window_argb_value 0
 own_window_argb_visual yes
 own_window_colour 000000
+
 TEXT
-${voffset 10}${color #2F3334}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color #ed5353}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color #324831}${font GE Inspira:pixelsize=22}${time %B} ${time %Y}${font}${color #2D472C}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %A}${font}
-${voffset 20}${offset 5}${font Ubuntu Bold:pixelsize=12}${color #ed5353}HDD: ${offset 5}${color #3C434D}${fs_free /} / ${fs_size /}${offset 30}${color #ed5353}RAM: ${offset 5}${color #3C434D}$mem / $memmax${offset 30}${color #ed5353}CPU: ${offset 5}${color #3C434D}${cpu cpu0}%${offset 30}${color #ed5353}ЯДРО: ${offset 5}${color #3C434D} ${kernel} ${font}
+
+${voffset 5}\
+${offset 5}\
+${color #2F3334}\
+${font GE Inspira:pixelsize=120}\
+${time %H:%M}\
+${font}\
+${voffset -90}\
+${offset 10}\
+${color #ed5353}\
+${font GE Inspira:pixelsize=42}\
+${time %d}\
+${voffset 1}\
+${color #324831}\
+${font GE Inspira:pixelsize=22}\
+${offset 10}\
+${time %B}\
+${offset 10}\
+${time %Y}\
+${font}\
+${color #2D472C}\
+${voffset 15}\
+${font GE Inspira:pixelsize=58}\
+${offset -160}\
+${time %A}\
+${font}
+
+${voffset 20}\
+${offset 3}\
+${font Ubuntu Bold:pixelsize=12}\
+${color #ed5353}HDD: \
+${offset 3}\
+${color #3C434D}\
+${fs_free /} / ${fs_size /}\
+${offset 20}\
+${color #ed5353}RAM: \
+${offset 3}\
+${color #3C434D}$mem / $memmax\
+${offset 20}\
+${color #ed5353}CPU: \
+${offset 3}\
+${color #3C434D}\
+${cpu cpu0}%\
+${offset 20}\
+${color #ed5353}ЯДРО: \
+${offset 3}\
+${color #3C434D}\
+${kernel}\
+${font}
 
 ${offset 5}\
 ${font Ubuntu Mono Bold:pixelsize=28}\
-${execi 600 python3 ./weather.py}
+${execi 600 python3 ./weather.py}\
+${font}
 
 
 
